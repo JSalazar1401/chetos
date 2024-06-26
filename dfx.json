@@ -1,0 +1,50 @@
+{
+  "canisters": {
+    "chetos_backend": {
+      "build": "npx azle chetos_backend",
+      "candid": "src/chetos_backend/chetos_backend.did",
+      "gzip": true,
+      "main": "src/chetos_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/chetos_backend/chetos_backend.wasm"
+    },
+    "chetos_frontend": {
+      "dependencies": [
+        "chetos_backend"
+      ],
+      "source": [
+        "src/chetos_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "chetos_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
