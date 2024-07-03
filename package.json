@@ -15,5 +15,12 @@
   "workspaces": [
     "src/chetos_backend",
     "src/chetos_frontend"
-  ]
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
 }
